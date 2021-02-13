@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>หน้า contact</h1>
+<a href="/about" >about</a>
+    <a href="/contact" >contact</a>
 </body>
 </html>
