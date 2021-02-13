@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-<h1>หน้า contact</h1>
-<a href="/about" >about</a>
+    <a href="/">หน้าแรก</a> |
+<a href="/about" >about</a> |
     <a href="/contact" >contact</a>
+<h1>หน้า contact</h1>
+
 </body>
 </html>
