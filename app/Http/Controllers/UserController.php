@@ -23,18 +23,18 @@ class UserController extends Controller
     public function store(Request $request)
 
     {
+
+        $name = $request->input('name');
+        $username = $request->input('username');
+        $email = $request->input('email');
+        $password = $request->input('password');
+
         $user = new User();
-        $user->name = $request->input('name');
-        $user->username = $request->input('username');
-        $user->email = $request->input('email');
-        $user->password = $request->input('password');
 
-
-
-        //$user->name =  "Parinthorn Mukdapirom";
-        //$user->username = "admin";
-        //$user->email = "61123831@g.cmru.ac.th";
-        // $user->password = Hash::make("1234");
+        $user->name =  $name;
+        $user->username = $username;
+        $user->email = $email;
+        $user->password = Hash::make($password);
         $user->save();
         return redirect('/user');
     }
@@ -50,24 +50,18 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 
-        $user = new User();
+
         $name = $request->input('name');
         $username = $request->input('username');
         $email = $request->input('email');
         $password = $request->input('password');
 
 
-
-        //$user->name =  "Parinthorn Mukdapirom";
-        //$user->username = "admin";
-        //$user->email = "61123831@g.cmru.ac.th";
-        // $user->password = Hash::make("1234");
-
         $user = User::find($id);
         $user->name = $name;
         $user->username = $username;
         $user->email = $email;
-        $user->password = $password;
+        $user->password = Hash::make($password);
         $user->save();
         return redirect('user');
     }

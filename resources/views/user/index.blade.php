@@ -8,8 +8,9 @@
             <td>ลำดับ</td>
             <td>ชื่อ</td>
             <td>Username</td>
-
             <td> Email</td>
+        <td>สร้างเมื่อ</td>
+        <td>จัดการ</td>
 
         </tr>
     </thead>
@@ -20,7 +21,7 @@
             <td>{{$item->name}}</td>
             <td>{{$item->username}}</td>
             <td>{{$item->email}}</td>
-
+            <td>{{$item->created_at}}</td>
             <td><a href="/user/edit/{{$item->id}}">แก้ไข</a> |<a href="/user/delete/{{$item->id}}"> ลบ</a></td>
         </tr>
         @endforeach

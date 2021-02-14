@@ -7,6 +7,7 @@
         <tr>
             <td>ลำดับ</td>
             <td>ชื่อหมวดหมู่</td>
+
             <td>สร้าง เมื่อ</td>
             <td>จัดการ</td>
         </tr>
@@ -16,6 +17,8 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
+
+
             <td>{{$item->created_at}}</td>
             <td><a href="/category/edit/{{$item->id}}">แก้ไข</a> |<a href="/category/delete/{{$item->id}}"> ลบ</a></td>
         </tr>

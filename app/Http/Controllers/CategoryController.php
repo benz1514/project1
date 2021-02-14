@@ -23,8 +23,10 @@ class CategoryController extends Controller
     public function store (Request $request)
     {
         $name = $request->input('name');
+
         $category = new Category();
         $category->name = $name;
+
         $category->save();
         return redirect('/category');
     }
@@ -41,8 +43,10 @@ class CategoryController extends Controller
     {
 
         $name = $request->input('name');
+
         $category = Category::find($id);
         $category->name = $name;
+
         $category->save();
         return redirect('/category');
     }

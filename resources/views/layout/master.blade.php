@@ -11,7 +11,9 @@
 <a href="/about" >about</a> |
     <a href="/contact" >contact</a> |
     <a href="/category">category</a>|
-    <a href="/user">user</a>
+    <a href="/user">user</a>|
+     <a href="/auth/login">login</a>
+     สวัสดี,@if(auth()->check()) {{auth()->user()->name}} <a href="/auth/logout">ออกจากระบบ</a> @else บุคคลทั่วไป @endif
     @yield("content")
 <hr>
 &copy; 2021 Parinthorn Mukdapirom

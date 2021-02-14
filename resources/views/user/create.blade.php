@@ -4,13 +4,13 @@
 <form action="/user/store" method="post">
     @csrf
     ชื่อ
-<input type="text" name="name" required>
+<input type="text" name="name" required><br>
 usermame
-<input type="text" name="username" required>
+<input type="text" name="username" required><br>
 email
-<input type="text" name="email" required>
+<input type="email" name="email" required><br>
 passwords
-<input type="text" name="password" required>
+<input type="password" name="password" required><br>
 <button type="submit">บันทึก</button>
 
 
