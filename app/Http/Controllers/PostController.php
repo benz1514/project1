@@ -20,7 +20,7 @@ class PostController extends Controller
     public function create()
     {
         $data = [
-            'categories'=>Category::all(),
+            'categories'=>Category::all()
         ];
         return view('post.create',$data);
     }
@@ -34,17 +34,17 @@ class PostController extends Controller
             $path = "http://via.placeholder.com/150x150";
         }
         $title = $request->input('title');
-        $category_id = $request->input('category_id');
+$category_id = $request->input('category_id');
         $user_id = auth()->user()->id;
         $detail = $request->input('detail');
 
 
 
         $post = new Post();
-
+$post->category_id=$category_id;
         $post->title =  $title;
         $post->thumbnail = $path;
-        $post->category_id = $category_id;
+
         $post->user_id = $user_id;
         $post->detail = $detail;
         $post->save();

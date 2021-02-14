@@ -6,11 +6,11 @@
 หัวข้อข่าว |
 <input type="text" name="title" required><br>
 รูปประจำข่าว  |
-<input type="file" name="thumnail" required><br>
+<input type="file" name="thumbnail" required><br>
 หมวดหมู่  |
 <select name="category_id" id="">
-    @foreach($category as $item)
-    <option value="{{ $item->id}}s">{{ $item->name}}</option>
+    @foreach($categories as $item)
+    <option value={{ $item->id}}>{{ $item->name}}</option>
     @endforeach
 </select><br>
 รายละเอียด |
