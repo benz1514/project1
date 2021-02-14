@@ -9,7 +9,8 @@
 <body>
     <a href="/">หน้าแรก</a> |
 <a href="/about" >about</a> |
-    <a href="/contact" >contact</a>
+    <a href="/contact" >contact</a> |
+    <a href="/category">category</a>
     @yield("content")
 <hr>
 &copy; 2021 Parinthorn Mukdapirom
