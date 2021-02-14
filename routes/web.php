@@ -44,7 +44,7 @@ Route::get('/category/delete/{id}', [CategoryController::class, 'delete']);
 
 Route::get('/user', [UserController::class, 'index']);
 
-Route::get('/user/create', [UserController::class, 'create']);
+Route::get('/user/create', [UserController::class, 'create'])->middleware('auth');
 
 Route::post('/user/store', [UserController::class, 'store']);
 
@@ -69,7 +69,7 @@ Route::get('/post/delete/{id}', [PostController::class, 'delete']);
 
  //auth
 
-Route::get('/auth/login', [AuthController::class, 'login']);
+Route::get('/auth/login', [AuthController::class, 'login'])->name("login");
 Route::post('/auth/doLogin', [AuthController::class, 'doLogin']);
 Route::get('/auth/register', [AuthController::class, 'register']);
 Route::post('/auth/doRegister', [AuthController::class, 'doRegister']);
