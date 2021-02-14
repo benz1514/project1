@@ -1,9 +1,9 @@
 @extends('layout.master')
 @section('content')
 <h1>กรุณากรอกข้อมูล</h1>
-<form action="/category/delete/{{$category->id}}" method="delete">
+<form action="/user/delete/{{$user->id}}" method="delete">
     @csrf
-<input type="text" name="name" value="{{$category->name}}" required>
+<input type="text" name="name" value="{{$user->name}}" required>
 <button type="submit">บันทึก</button>
 
 

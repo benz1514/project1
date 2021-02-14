@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('content')
-<h1>หมวดหมู่ข่าว</h1>
+<h1>ข้อมูลสามชิก</h1>
 <a href="/user/create">+เพิ่มชื่อ</a>
 <table>
     <thead>
