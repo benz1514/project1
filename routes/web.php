@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,14 +40,14 @@ Route::get('/category/delete/{id}', [CategoryController::class, 'delete']);
 
 
 
-Route::get('/user', [CategoryController::class, 'index']);
+Route::get('/user', [UserController::class, 'index']);
 
-Route::get('/user/create', [CategoryController::class, 'create']);
+Route::get('/user/create', [UserController::class, 'create']);
 
-Route::post('/user/store', [CategoryController::class, 'store']);
+Route::post('/user/store', [UserController::class, 'store']);
 
-Route::get('/user/edit/{id}', [CategoryController::class, 'edit']);
+Route::get('/user/edit/{id}', [UserController::class, 'edit']);
 
-Route::post('/user/update/{id}', [CategoryController::class, 'update']);
+Route::post('/user/update/{id}', [UserController::class, 'update']);
 
-Route::get('/user/delete/{id}', [CategoryController::class, 'delete']);
+Route::get('/user/delete/{id}', [UserController::class, 'delete']);
